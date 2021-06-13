@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "Intro"
+    },
+    {
+      "path": "Integrating_SW_with_Caches"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Integrating_SW_with_Caches"
+  }
+}

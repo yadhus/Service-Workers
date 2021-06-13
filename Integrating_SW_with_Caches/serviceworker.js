@@ -4,7 +4,7 @@ let dynamicCacheName = "dynamicCache";
 let fontCacheName = "fontCache";
 let imageCacheName = "imageCache";
 
-let staticAssets = ["/", "/index.html", "/css/index.css", "/js/index.js"];
+let staticAssets = ["/", "/index.html", "/index.css", "/index.js"];
 
 self.addEventListener("install", (evt) => {
   console.log("SW installed");

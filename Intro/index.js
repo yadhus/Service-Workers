@@ -64,15 +64,13 @@ const App = {
             return cacheResponse;
           } else {
             console.log("Not found in the cache");
-            return fetch(`${this.imageUrlString}`).then(
-              (response) => {
-                if (!response) {
-                  throw response.statusText;
-                }
-                cache.put(this.imageUrlString, response.clone());
-                return response;
+            return fetch(`${this.imageUrlString}`).then((response) => {
+              if (!response) {
+                throw response.statusText;
               }
-            );
+              cache.put(this.imageUrlString, response.clone());
+              return response;
+            });
           }
         });
       })
@@ -105,7 +103,8 @@ const App = {
   },
 };
 
-App.startCaching();
+App.init();
+// App.startCaching();
 document.querySelector("h2").addEventListener("click", () => {
   App.deleteCache();
 });
